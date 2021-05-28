@@ -1,0 +1,91 @@
+@use '../1-base/variables'
+@use '../1-base/placeholders'
+@use '../1-base/base-mixins'
+
+.jobs-container
+    background-color: variables.$secondary-bg
+    padding: 3rem
+
+    @include base-mixins.mobile
+        padding: 2rem
+
+    h2
+        @extend %section-title
+
+    .jobs-list
+        display: flex
+        padding: 2rem 0
+
+        @include base-mixins.mobile
+            flex-direction: column
+
+        .first-job
+            width: 30%
+            height: 415px
+            margin: 0 2%
+            background-image: url('../img/job1.jpg')
+            position: relative
+            cursor: pointer
+            transition: .5s
+            @extend %center-bg
+            @extend %card-hover
+
+        @include base-mixins.mobile
+            @include base-mixins.card-mobile
+
+        .other-jobs-container
+            display: flex
+            flex-wrap: wrap
+            width: 68%
+
+        @include base-mixins.mobile
+            width: 100%
+            flex-direction: column
+
+        .job-card
+            width: 46%
+            height: 200px
+            position: relative
+            cursor: pointer
+            margin-bottom: 15px
+            margin-right: 15px
+            @extend %center-bg
+            @extend %card-hover
+
+            @include base-mixins.mobile
+                @include base-mixins.card-mobile
+
+        #job2
+            background-image: url('../img/job2.jpg')
+
+        #job3
+            background-image: url('../img/job3.jpg')
+
+        #job4
+            background-image: url('../img/job4.jpg')
+
+        #job5
+            background-image: url('../img/job5.jpg')
+
+        .job-card-cover
+            position: absolute
+            top: 0
+            left: 0
+            width: 100%
+            height: 100%
+            padding-top: 1.75rem
+            background-color: rgba(0, 0, 0, .6)
+            border: 3px solid variables.$primary-color
+
+        .job-card-title
+            text-align: center
+            color: #FFF
+            font-size: 2.2rem
+            transition: .5s
+            font-weight: bold
+
+        .job-card-description
+            text-align: center
+            color: #FFF
+            padding: 1rem
+            font-size: .9rem
