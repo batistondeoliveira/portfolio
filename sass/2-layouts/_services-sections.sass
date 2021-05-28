@@ -26,6 +26,10 @@
             border: 1px solid #CCC
             transition: .3s
 
+            &:hover
+                border: transparent
+                box-shadow: 0 1px 10px #CCC
+
         @include base-mixins.mobile
             width: 100%
             margin-bottom: 2rem
@@ -42,8 +46,4 @@
             margin-bottom: 1rem
       
         p 
-            color: variables.$text-color
-
-        &:hover
-            border: transparent
-            box-shadow: 0 1px 10px #CCC
+            color: variables.$text-color        
